@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Looping And Iteration">
+        <h1>below is the example of for each  directives</h1>
+        <template for:each={technologies} for:item="tech">
+            {tech.first}
+            <div key={tech}></div>  
+        </template>
+        
+    </lightning-card>
+</template>

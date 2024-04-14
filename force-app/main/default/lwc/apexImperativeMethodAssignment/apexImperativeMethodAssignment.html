@@ -1,0 +1,28 @@
+<template>
+<lightning-card title="Account Data table">
+    <template if:true={accListVar}>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+            <thead>
+                <tr>
+                    <th>Radio Button</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Industry</th>
+                    
+                </tr>
+            </thead>
+            <template for:each={accListVar} for:item="acc">
+                <tbody key={acc}>
+                    <tr>
+                        <td><input type="radio" name="Radiobutton" value={acc.Id} style="margin-right: 5px;" onclick={handleRadioButton} ></td>
+                        <td >{acc.Name}</td>
+                        <td  >{acc.Phone}</td>
+                        <td>{acc.Industry}</td>
+                       
+                    </tr>
+                </tbody>
+            </template>
+        </table>
+    </template>
+</lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Child Comp">
+    <lightning-input data-inp1="inpVal1" name="RoomNO" label="Enter Room NO" onchange={inputChangehandler}></lightning-input>
+    <lightning-input data-inp2="inpVal2" name="RoomCapacity" label="Enter Room Capacity" onchange={inputChangehandler1}></lightning-input>
+    <lightning-button label="Insert RoomInfo" variant="brand" onclick={handleclick}></lightning-button>
+
+     
+
+    <div class="slds-p-around_medium lgc-bg">
+        <template for:each={RoomInfo} for:item="roomVar">
+        <lightning-tile key={roomVar} label={roomVar.RoomNo} href={roomVar.RoomNo} onclick={clickHandler}>
+            <p class="slds-truncate" >{roomVar.RoomCapacity}</p>
+        </lightning-tile>
+    </template>
+    </div>
+
+</lightning-card>
+</template>

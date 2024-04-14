@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Chaining of Wire function">
+        
+        <template if:true={AccountVar}>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                <thead>
+                    <tr>
+                        <th>AccountId</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Industry</th>
+                        
+                    </tr>
+                </thead>
+                
+                    <tbody >
+                        <tr>
+                            <td>{AccountVar.Id}</td>
+                            <td>{AccountVar.Name}</td>
+                            <td>{AccountVar.Phone}</td>
+                            <td>{AccountVar.Industry}</td>
+                           
+                        </tr>
+                    </tbody>
+               
+            </table>
+        </template>
+    </lightning-card>
+</template>

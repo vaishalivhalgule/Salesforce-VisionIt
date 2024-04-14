@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Passing Dynamic Values in array">
+        <lightning-input data-inp1="inp1" type="text" placeholder="Room Number" onchange={handleRoomNumberChange}></lightning-input>
+        <lightning-input data-inp2="inp2" type="text" placeholder="Room Capacity" onchange={handleRoomCapacityChange}></lightning-input>
+        <lightning-button variant="brand" label="Insert Values" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <template if:true={hotelRoomsVar}>
+            
+                <template for:each={hotelRoomsVar} for:item="room">
+                    <c-hotel-room1 key={room.roomNo} hotel-room-info-var={room} >
+                    </c-hotel-room1>
+                </template>
+            
+        </template>
+    </lightning-card>
+</template>

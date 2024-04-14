@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="get record LDS Comp">
+        <template if:true={wiredgetAccount.data}>
+            <p>Account Name:{wiredgetAccount.data.fields.Name.value}</p>
+            <p>Account Name:{wiredgetAccount.data.fields.Number_of_Contacts__c.value}</p>
+        </template>
+
+        <div>  
+            <lightning-formatted-text value={acctName}></lightning-formatted-text><br>
+           
+           <lightning-formatted-number value={acctNoOfContacts}></lightning-formatted-number>
+
+           <h1>{customer_Email}</h1>
+        </div>
+    </lightning-card>
+</template> 

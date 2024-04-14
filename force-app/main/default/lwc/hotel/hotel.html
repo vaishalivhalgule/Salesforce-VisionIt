@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Hotel">
+        <template for:each={hotelRooms} for:item="hotelroomVar">
+           <c-hotel-room key={hotelroomVar.roomNumber} hotel-room-info={hotelroomVar} show-room-info={hotelroomVar.isDisplay}>
+           </c-hotel-room>
+        </template>
+    </lightning-card>
+
+       
+</template>

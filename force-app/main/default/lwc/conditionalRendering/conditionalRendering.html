@@ -1,0 +1,17 @@
+<template>
+
+    <lightning-card title="Conditional Rendering">
+        <lightning-input type="checkbox" label="Show div ..click me to see the magic" onchange={showDivHandler}></lightning-input>
+        <h1>below is the example of if true and if false directives</h1>
+        <template if:true={displayDiv}>
+            <div>I am here... click again to hide me</div>
+        </template><br/><br/>
+
+        
+        <lightning-button variant="brand" label="Click here to show/hide Input" title="Primary action" value={Ajay} onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <template if:true={displayInput}>
+        <lightning-input type="Text" placeholder="Enter Something..."></lightning-input>
+        </template>
+    </lightning-card>
+    
+</template>

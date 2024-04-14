@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Wire as property">
+        <template if:true={wiredGetAccounts.data}>
+        <template for:each={wiredGetAccounts.data} for:item="acc">
+          <div key={acc}>{acc.Name}</div> 
+        </template>
+    </template>
+    <template if:false={wiredGetAccounts.data}>
+        <template for:each={wiredGetAccounts.Error} for:item="error">
+            <div key={error}>{error}</div> 
+          </template>
+    </template>
+    </lightning-card>
+   
+    <lightning-card title="Wire as function">
+        <template for:each={contactsListVar} for:item="con">
+            <div key={con}>{con.LastName}</div> 
+          </template>
+    </lightning-card>
+
+    <lightning-card title="Wire as property">
+        
+        {wiredOpportunity.data.Name}
+
+    </lightning-card>
+
+    <lightning-card title="Wire as property">
+        
+    <lightning-input type="integer" placeholder="Enter Number"></lightning-input>
+    <lightning-button variant="brand" label="Search" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    
+    <template if:true={wiredsearchAccount.data}>
+        <template for:each={wiredsearchAccount.data} for:item="acct">
+          <div key={acct}>{acct.Name}</div> 
+        </template>
+    </template>
+    
+    </lightning-card>
+   
+</template>

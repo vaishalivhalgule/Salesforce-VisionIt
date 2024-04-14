@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Wire as property">
+        <lightning-input data-inp1="inpVal1" type="integer" placeholder="Enter Number"></lightning-input>
+        <lightning-input data-inp2="inpVal2" type="text" placeholder="Enter text"></lightning-input>
+    <lightning-button variant="brand" label="Search" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    
+        <template if:true={wiredgetAccounts.data}>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                <thead>
+                    <tr>
+                        
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Industry</th>
+                        
+                    </tr>
+                </thead>
+                <template for:each={wiredgetAccounts.data} for:item="acc">
+                    <tbody key={acc}>
+                        <tr>
+                            
+                            <td >{acc.Name}</td>
+                            <td  >{acc.Phone}</td>
+                            <td>{acc.Industry}</td>
+                           
+                        </tr>
+                    </tbody>
+                </template>
+            </table>
+        </template>
+    </lightning-card>
+</template>
